@@ -1,0 +1,908 @@
+/*////COLOURS AS OF NOW////*/
+
+/*  light grey #f7f7f5
+    dark grey #807c82
+    purple #8a5acf
+    orange #ec673c
+    green #2c9f74
+    yellow #ffdf36
+    terracotta #e35c4d
+*/
+
+/*/////FONT WEIGHTS/////*/
+
+/*  Light 300
+    Regular 400
+    Medium 500
+    Semibold 600
+*/
+
+body{
+    font-family: 'Work Sans', sans-serif;
+    background-color: #f7f7f5; 
+}
+
+/*//////////TYPE SCALE///////////*/
+
+/*This is the large type at the start of the Look, Learn and Talk pages.*/
+
+h1{
+    font-size:300px;
+    line-height:300px;
+    font-weight:600;
+    text-align:center;
+    color: #f7f7f5;
+}
+
+/*This is the landing page text for the homepage.*/
+
+.hp1{
+    font-size:100px;
+    line-height:300px;
+    font-weight:600;
+    text-align:center;
+    color: #f7f7f5;  
+}
+
+/*These are the classes to colour in the full stops on the landing page and allow us to keep the speech bubble in the correct place.*/ 
+
+.greenperiod{
+    color: #2c9f74;
+}
+.redperiod{
+    color: #e35c4d;  
+}
+.purpleperiod{
+    color: #8a5acf;
+}
+
+/*This is the medium size type throughout the pages.*/
+
+h3{
+    font-size:64px;
+    line-height:75px;
+    font-weight:400;
+    text-align:left;
+}
+
+/*These change the colours of the links to each page from the homepage and bottom of other pages. */
+
+a.linklook{
+    color:#e35c4d; 
+    font-weight: 600;
+}
+
+a:hover.linklook{
+    color:#e35c4d; 
+}
+
+a.linklearn{
+    color:#2c9f74;
+    font-weight: 600;
+}
+a:hover.linklearn{
+    color:#2c9f74;
+    
+}
+
+a.linktalk{
+    color:#8a5acf; 
+    font-weight: 600;
+}
+a:hover.linktalk{
+    color:#8a5acf; 
+    
+}
+
+/*This is the main body reading text.*/
+
+p1{
+    font-size:28px;
+    line-height:35px;
+    font-weight:400;
+    text-align:left;
+    color: #807c82;  
+}
+
+/*This is the reading text bold span class.*/
+
+.p1bold{
+    font-weight:600;
+}
+
+/*This is the black label text, replacing the text which was in bubbles before.*/
+
+p2{
+    font-size:28px;
+    line-height:35px;
+    font-weight:500;
+    text-align:left;
+}
+
+/*This is the typescale for the bubble type.*/
+
+.p4{
+     font-size:28px;
+    line-height:35px;
+    font-weight:500;
+    text-align:center;
+   color: #807c82;  
+}
+
+
+/*This is the nav bar type.*/
+
+p3{
+    font-size:16px;
+    line-height:20px;
+    font-weight:600;
+    text-align:center;
+    color: #f7f7f5;
+}
+
+/*This is the footer type regular for links and the bold class for the headings.*/
+
+
+.footertype{
+    font-size:16px;
+    line-height:20px;
+    font-weight:400;
+    text-align:left;
+    color: #f7f7f5;
+}
+
+.copyright{
+    font-size:16px;
+    line-height:20px;
+    font-weight:300;
+    text-align:left;
+    color: #f7f7f5;
+    
+}
+
+.footerbold{
+    font-size:16px;
+    line-height:20px;
+    font-weight:600;
+    text-align:left;
+    color: #f7f7f5; 
+}
+/*This is to style the links on the footer. It overrides the boostrap link stylings.*/
+
+.footerlink{
+    font-size:16px;
+    line-height:20px;
+    font-weight:400;
+    text-align:left;
+    color: #f7f7f5;
+    text-decoration: none;
+}
+
+a:hover.footerlink{
+    color: #f7f7f5;
+    text-decoration: none;
+}
+
+.footerlogo{
+    font-size:64px;
+    line-height:75px;
+    font-weight:600;
+    text-align:left;
+    color: #f7f7f5;
+}
+
+
+/*//////// NAV BAR ////////*/
+
+.navbar-default{
+  transition:500ms ease;
+  background:transparent;
+}
+
+.navbar-default.scrolled{
+  background:#f7f7f5;
+}
+
+.nav-link{
+    color: black;   
+} 
+ 
+.navbar-collapse{
+    text-align: center;  
+}
+
+.nav-item{
+    color: black;
+    font-size:16px;
+    line-height:20px;
+    font-weight:600;
+    text-align:center;
+    padding-right:45px;
+    z-index: 1;
+    position: relative;
+    top:5px;  
+}
+
+.navbar-brand{
+    padding-left:10px;
+    margin-right: 0px;
+}
+
+/*Background colour for the navbar*/
+ 
+a:hover{
+    color:black;
+} 
+
+/*Changes colour of nav on hover*/
+ 
+.navbar-toggler:focus, .navbar-toggler:active{
+    outline:none;
+    box-shadow:none;
+}
+.navbar-toggler-icon{
+    outline: none;
+}
+
+/*This positions the dots under the nav bar. Yes we use z index sorry bout it cant get it working without it and it doesnt break the code so should be ok!*/
+
+.nav-dot{
+    z-index: 1;
+    position: relative;
+    top: -10px;
+}
+.transdot{
+    
+    z-index: -1;
+    opacity: 0;
+   
+}
+
+/*////TIME TO TALK SWIPE/////*/
+
+#homeswipe {
+
+        display: none;
+        transform: scaleX(0);
+        transform-origin: left;
+    
+        animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s forwards;
+
+        animation-delay: 0.1s;
+        padding-left: 0;        
+}
+
+@keyframes grow-left {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+
+#homeiconswipe:hover + #homeswipe {
+    display: inline;
+}
+
+/*/////DOTS ON HOVER////*/
+
+
+#lookdotvisible{
+    display:none;
+    transform: scaleX(0);
+    transform-origin: center;
+    animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s forwards;
+    animation-delay: 0.1s;
+    padding-left: 0;
+}
+
+#lookhover:hover + #lookdotvisible{
+    display: inline-block;
+}
+
+#learndotvisible{
+    display:none;
+    transform: scaleX(0);
+    transform-origin: center;
+    animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s forwards;
+    animation-delay: 0.1s;
+    padding-left: 0;
+}
+
+#learnhover:hover + #learndotvisible{
+    display: inline-block;
+}
+
+#talkdotvisible{
+    display:none;
+    transform: scaleX(0);
+    transform-origin: center;
+    animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s forwards;
+    animation-delay: 0.1s;
+    padding-left: 0;
+}
+
+#talkhover:hover + #talkdotvisible{
+    display: inline-block;
+}
+
+/*#talkdotvisiblehome{
+    z-index: 1;
+
+    display:none;
+    
+    transform: scaleX(0);
+  transform-origin: center;
+  animation: grow-left cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s forwards;
+  animation-delay: 0.1s;
+padding-left: 0;
+}
+#talkhover:hover + #talkdotvisiblehome{
+    display: inline-block;
+}*/
+
+ 
+
+
+/*////// HIDE ME /////*/
+
+.hideme.visible{
+    opacity:1;
+   /* transform:none;*/
+    transform: translateY(0%);
+}
+
+.hideme {
+    visibility: hidden;
+     opacity:0;
+    transform: translateY(80%);
+    transition: opactity 1s, transform 1s;
+  animation-name: hideme;
+  -webkit-animation-name: hideme;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+ 
+}
+
+@keyframes hideme {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50%);
+  } 
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes hideme {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50%);
+  } 
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+
+/*
+/////HR//////
+*/
+
+
+hr {
+    margin-top:0px;
+ 
+    clear: both;
+    visibility: hidden;
+}
+
+/*/////SPACING ROWS//////*/
+
+/*This is the empty space after reading text from a diagram before the label for the next diagram and after the big text before a new diagram.
+Class can just be applied to the row.
+*/
+
+
+.marginrow{
+    height:30px;
+}
+
+.afterdiagram{
+    height: 115px;
+}
+/*blank space after bubbles.*/
+
+.afterbubbles{
+    height: 130px;
+}
+.afterbubblepreinfo{
+    height: 130px;
+}
+.invisiblebubble{
+   opacity: 0;
+}
+
+/*This is the space before the footer. Give the row this class.*/
+
+.prefooter{
+    height: 225px;
+}
+
+/*/////LANDING PAGES//////*/
+
+/*These give the background colour and padding above and below the welcoming words, Look Learn and Talk. Can adjust this.*/
+
+/*The dots classes give the padding and background colour for the row with the three dots. Can also be adjusted but must be changed on all three!*/ 
+
+.landinglook{
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color: #e35c4d; 
+}
+
+.dotslook{
+    background-color: #e35c4d;
+    padding-bottom: 20px; 
+    text-align: center;
+}
+
+.landinglearn{
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color: #2c9f74;
+}
+
+.dotslearn{
+    background-color: #2c9f74;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.landingtalk{
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color: #8a5acf;
+}
+.landinghome{
+    padding-top: 204px;
+    padding-bottom: 204px;
+    background-color: #8a5acf;
+    text-align: center;
+}
+
+.dotstalk{
+    background-color: #8a5acf;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.dotshome{
+    background-color: #8a5acf;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+
+
+.seconddots{
+    text-align: center;
+}
+
+/*This is the class on the homepage logo next to the type on the landing pages. Oops used a Z-Index! he he he*/
+
+.imagefloat{
+    z-index: 1;
+    position: relative;
+    bottom: -60px;
+    left:-68px;
+    
+}
+.imagefloatlearn{
+    z-index: 1;
+    position: relative;
+    bottom: -60px;
+    left:-68px;
+    
+}
+.imagefloathome{
+    z-index: 1;
+    position: relative;
+    bottom: -6px;
+    left:-6px;
+    
+}
+
+/*///// THREE DOTS DIAGRAM/////*/
+
+/*The following are to control the spacing above and below the yellow dots.
+---Post label is for the dots that come after the label of the visuals.
+---Pre info comes before the reading type/ supplementary info.*/
+
+.postlabel{
+    padding-top: 20px;
+}
+
+.preinfo{
+    padding-bottom: 20px;
+}
+
+/*////// FOOTER //////*/
+
+.footer{
+    padding-top: 85px;
+    padding-bottom: 80px;
+    background-color: #e35c4d;
+}
+
+.footerlearn{
+    padding-top: 85px;
+    padding-bottom: 80px;
+    background-color: #2c9f74;
+}
+.footertalk{
+    padding-top: 85px;
+    padding-bottom: 85px;
+    background-color: #8a5acf;
+}
+.footerbreak{
+    height: 30px;
+}
+/*
+
+.footerimage{
+   
+   padding-right: 15px;
+}
+*/
+
+
+
+/*//////NOOT PLACEMENT////////*/
+
+.nootfive{ 
+    
+    width: 445px;
+    position: relative;
+    z-index: -1;
+    
+  }
+
+/*60px can be changed but technically thats what it is from the indesign document.*/
+.lowernoot{
+    padding-top: 60px;
+    
+}
+
+.highernoot{ 
+    position: relative;
+    z-index: -1;
+    top: 0px;
+    left: 0px
+}
+
+.indoornoot{
+    width: 825px;
+}
+
+.doublenoot{
+    
+    width: 920px;
+    
+}
+
+.nootten{
+    width: 920px;
+    
+}
+
+
+/*/////BUBBLE CLASSES/////*/
+
+/*These are classes given to the paragraphs in the bubbles. They are the same at large scale but have to be different in the media query which is why they have two distinct classes.*/
+
+.p4threelines{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding-left: 35px;
+    padding-right: 35px;
+    width: 100%;
+}
+
+.p4threelinestwo{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding-left: 35px;
+    padding-right: 35px;
+    width: 100%;
+    
+}
+/*
+.talkdots1{
+    text-align: center;
+    padding-top: 20px;
+}
+*/
+
+/* This refers to the first and third bubble, which have a different padding top to the second and fourth bubble.*/
+
+.bubble{
+   position: relative;
+    left:0;
+    top:0;
+}
+
+/* This refers to the first and third bubble, which have a different padding top to the second and fourth bubble.*/
+
+.firstbubble{
+   position: relative;
+    left:0;
+    top:120px;
+}
+
+.bubblehover{
+    animation: MoveUpDown 2.5s linear infinite;
+     position: relative;
+    left: 0;
+    bottom: 0;
+   /* animation-duration: 1s;*/
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 10px;
+  }
+}
+
+
+/*----------------------------------------------*/
+
+
+/*//////////MEDIA QUERIES/////////*/
+
+@media only screen and (max-width: 1200px) {
+    
+h1{
+    font-size:125px;
+    text-align: center;
+}
+    
+h3{
+    font-size: 28px;
+    line-height: 35px;
+}
+.footerlogo{
+    font-size:48px;
+
+}
+    
+p1{
+    font-size: 16px;
+    line-height: 20px;
+}
+    
+p2{
+    font-size: 16px;
+    line-height: 20px;
+}
+    .p4{
+        font-size: 16px;
+    line-height: 20px;
+        
+    }
+
+.hp1{
+    font-size: 48px;
+    
+        
+}
+    
+    /*This reduces height of spacing at mobile.*/
+    
+.afterdiagram{
+    height: 50px;
+    }
+    
+.nootfive{ 
+    width: 49%;
+    /*background-color: red;*/
+  }
+.nootten{
+        width:100%;
+            
+}
+    
+    
+.lowernoot{
+    padding-top: 30px;
+
+    
+}
+    
+    /*This is controlling the positioning of the group noot after time alone and it makes no sense but lol might have to just do it that way.*/
+.groupnoot{
+    width: 88%;
+    top:-80px;
+    left: 70px;
+}
+    
+.indoornoot{
+    width:100%; 
+}
+    
+.doublenoot{
+    
+    width:100%;
+    
+}
+    
+    
+    /*This makes the dots smaller at mobile, need to adjust this.*/
+.threedots{    
+    width:5px;
+}
+   
+.imagefloat{
+    width: 25px;
+    z-index: 1;
+    position: relative;
+    bottom: -25px;
+    left:-30px;
+}
+.imagefloathome{
+    width: 25px;
+    z-index: 1;
+    position: relative;
+    bottom: -3px;
+    left:-5px;
+}
+    
+    
+.hometag{
+    visibility: hidden;
+}
+    
+.preinfo{
+    padding-bottom: 5px;
+}
+    
+.postlabel{
+    padding-top: 5px;
+}
+
+.nav-item{
+    z-index: 1;
+    position: relative;
+    top:5px;
+}
+    .order1{
+        order: 3;
+        
+    }
+    .order2{
+        order:1;
+    }
+    .order3{
+        order:2;
+    }
+.navcolour{
+      background-color:  #f7f7f5;
+        
+    }
+    #talkhover:hover + #talkdotvisible{
+    display: none;
+}
+     #learnhover:hover + #learndotvisible{
+    display: none;
+}  
+         #lookhover:hover + #lookdotvisible{
+    display: none;
+} 
+    
+/*/////BUBBLE CLASSES/////*/
+ 
+   /* This refers to the second and fourth bubble, which have a different padding top to the first and third bubble.
+*/
+.bubble{
+        width: 49%;  
+    }
+    
+       /* This refers to the first and third bubble, which have a different padding top to the second and fourth bubble.
+*/
+    
+.firstbubble{
+        width: 49%; 
+    }
+    
+.p4threelines{
+    position: absolute;
+    top: 25px;
+    left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+}
+    
+.p4threelinestwo{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+}
+    /*This is because this row disappears at mobile so i had to make a new post bubble blank row and adjust the height accordingly.*/
+    
+.afterbubbles{
+        
+    height: 60px;
+    }
+
+  
+   /* Padding for third and fourth bubbles.*/
+    
+.mobilebubble{
+        padding-top: 50px;
+}
+    /*padding for each bubble. Gave them their own class to make quick adjustments if one fucks up!
+    */
+/*.bubble1{
+        padding-top: 25px;
+}*/
+.bubble2{
+        padding-top: 25px;
+}
+.bubble3{
+        padding-top: 30px;
+}
+.bubble4{
+        padding-top: 25px;
+}
+    
+.footerbreak{
+    height: 25px;
+}
+
+    .footer{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #e35c4d;
+}
+
+.footerlearn{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #2c9f74;
+}
+.footertalk{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #8a5acf;
+}
+    .footerimage{
+        padding-bottom: 20px;
+        width: 10vw;
+       
+        
+    }
+    .prefooter{
+        height: 50px;
+    }
+    
+    .afterbubblepreinfo{
+        height: 0px;
+    }
+    
+    .nav-item-1{
+        padding-bottom: 20px;
+    }
+    
+}
